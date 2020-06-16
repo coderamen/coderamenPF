@@ -1,7 +1,13 @@
 import React from "react"
+import Layout from "../components/layout"
+import Hero from "../components/hero"
 
-const IndexPage = () => {
-  return <h1>Hi there bro</h1>
+const IndexPage = ({ data }) => {
+  return (
+    <Layout>
+      <Hero />
+    </Layout>
+  )
 }
 
 export default IndexPage
