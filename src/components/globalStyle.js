@@ -1,6 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
+
 const GlobalStyle = createGlobalStyle`
+    @import url("https://fonts.googleapis.com/css?family=Fira+Sans")
+
     * {
         box-sizing: border-box;
     }
@@ -16,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: white;
         color: black;
         font-size: 1.125rem;
-        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        font-family: 'Fira Sans', sans-serif;
         line-height: 1.5rem;
         font-weight: 400;
     }
