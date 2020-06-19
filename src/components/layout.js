@@ -6,17 +6,24 @@ import Header from './header'
 import Footer from './footer'
 
 const StyledLayout = styled.div`
-    width: 100%;
-    min-height: 100vh;
-    margin: 0 auto;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: 100%;
+    @media (min-width: 1440px) {
+        margin-left: 300px;
+    }
+    @media (min-width: 768px) {
+        min-height: 100vh;
+        padding-bottom: 120px;   
+    }
+    @media screen and (min-width: 1440px) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .main-content {
         width: 100%;
         max-width: 52.5rem;
-        margin: 0 auto;
-        padding: 0 2.5rem;
+        padding: 0 64px;
     }
 `
 
@@ -28,7 +35,6 @@ const Layout = ({ children }) => {
             <GlobalStyle />
             <Header />
             <div className="main-content">{ children }</div>
-            <Footer />
         </StyledLayout>
     )
 }

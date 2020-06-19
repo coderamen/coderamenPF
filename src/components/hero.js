@@ -30,6 +30,9 @@ const StyledSection = styled.section`
         padding-right: 8px;  
         
     }
+    a:link:active, a:visited {
+        color: white;
+    }
 `
 
 const Hero = () => {
@@ -42,12 +45,20 @@ const Hero = () => {
                 I'm a software tester/developer, music lover and gamer
             </h2>
             <p>Test Analyst and Front End Developer.</p>
-            <p>"Emoji" Petaling Jaya, Malaysia</p>
+            <p><span role="img" aria-label="emoji">📍</span>Petaling Jaya, Malaysia</p>
             <div>
-                <FontAwesomeIcon className="iconPad" icon={faLinkedin}/>
-                <FontAwesomeIcon className="iconPad" icon={faGithub}/>
-                <FontAwesomeIcon className="iconPad" icon={faInstagram}/>
-                <FontAwesomeIcon className="iconPad" icon={faTwitter}/>
+                <a href="/">
+                    <FontAwesomeIcon className="iconPad" icon={faLinkedin}/>     
+                </a>
+                <a href="/">
+                    <FontAwesomeIcon className="iconPad" icon={faGithub}/>     
+                </a>
+                <a href="/">
+                    <FontAwesomeIcon className="iconPad" icon={faInstagram}/>     
+                </a>
+                <a href="/">
+                    <FontAwesomeIcon className="iconPad" icon={faTwitter}/>     
+                </a>
             </div>
         </StyledSection>
     )
