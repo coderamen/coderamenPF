@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 
 const GlobalStyle = createGlobalStyle`
-    @import url("https://fonts.googleapis.com/css?family=Fira+Sans")
+    @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Rubik&display=swap")
 
     * {
         box-sizing: border-box;
@@ -16,10 +16,10 @@ const GlobalStyle = createGlobalStyle`
         height: 100%;
         margin: 0;
         padding: 0;
-        background-color: white;
-        color: black;
+        background-color: #222831;
+        color: #eeeeee;
         font-size: 1.125rem;
-        font-family: 'Fira Sans', sans-serif;
+        font-family: 'Rubik', sans-serif;
         line-height: 1.5rem;
         font-weight: 400;
     }

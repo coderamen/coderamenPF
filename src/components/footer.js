@@ -13,7 +13,7 @@ const StyledFooter = styled.footer`
     font-weight: 700;
     .foot-content {
         width: 100%;
-        max-width: 62.5rem;
+        max-width: 52.5rem;
         margin: 0 auto;
         padding: 0 2.5rem;
         padding-top: 1.8rem;
