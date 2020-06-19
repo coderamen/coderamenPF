@@ -9,6 +9,9 @@ import { faLinkedin, faGithub, faInstagram, faTwitter } from '@fortawesome/free-
 config.autoAddCss = false
 
 const StyledSection = styled.section`
+
+
+
     .title {
         font-family: Rubik, Arial, sans-serif;
         font-size: 16px;

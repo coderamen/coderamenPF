@@ -20,6 +20,7 @@ const StyledLayout = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: fixed;
     .main-content {
         width: 100%;
         max-width: 52.5rem;
