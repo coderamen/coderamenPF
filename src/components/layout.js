@@ -3,12 +3,8 @@ import styled from 'styled-components'
 
 import GlobalStyle from './globalStyle'
 import Header from './header'
-import Footer from './footer'
 
 const StyledLayout = styled.div`
-    @media (min-width: 1440px) {
-        margin-left: 300px;
-    }
     @media (min-width: 768px) {
         min-height: 100vh;
         padding-bottom: 120px;   
@@ -22,15 +18,14 @@ const StyledLayout = styled.div`
     justify-content: center;
     position: fixed;
     .main-content {
-        width: 100%;
         max-width: 52.5rem;
         padding: 0 64px;
+        margin-left: 300px;
     }
 `
 
 
 const Layout = ({ children }) => {
-    console.log('check -->', children);
     return (
         <StyledLayout>
             <GlobalStyle />

@@ -4,14 +4,12 @@ import React from "react"
 import styled from 'styled-components'
 
 const StyledSideBar = styled.div`
-    @media (min-width: 1440px) {
-      width: 240px;
-    }
     @media screen and (min-width: 1440px) {
       padding-top: 32px;
       padding-left: 32px;
       padding-right: 32px;
     }
+    width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +30,7 @@ const StyledSideBar = styled.div`
       padding: 0;
     }
     li {
-      margin: 0.8vh 0;
+      margin: 0 50px;
     }
     a {
       font-size: 16px;
@@ -47,15 +45,14 @@ const StyledSideBar = styled.div`
 
 const Header = ({ siteTitle }) => (
   <StyledSideBar>
-    <div style={{ flex: `0 0 25%` }} />
-    <div className="menu">
+    <div style={{ flex: `0 0 25%` }} /> 
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/">Portfolio</Link></li>
-        <li><Link to="/">Blog</Link></li>
-        <li><Link to="/">Contact</Link></li>
+        <li><Link to="/home">Home</Link></li>
+        <li><Link to="/portfolio">Portfolio</Link></li>
+        <li><Link to="/blog">Blog</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
       </ul>
-    </div>
+    
     <div style={{ flex: `0 0 25%` }} />
   </StyledSideBar>
 )
