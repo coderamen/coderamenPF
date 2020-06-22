@@ -6,7 +6,8 @@ import Layout from '../components/layout'
 const Portfolio = () => (
     <div>
         <Layout>
-            <p>Portfolio <button><Link to="/home">back button</Link></button></p>
+            <p>Portfolio</p>
+            <button><Link to="/home">back button</Link></button>
         </Layout>      
     </div>
 )
