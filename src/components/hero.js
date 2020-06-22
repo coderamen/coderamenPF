@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "@fortawesome/fontawesome-svg-core/styles.css"
@@ -36,10 +37,19 @@ const StyledSection = styled.section`
 `
 
 const Hero = () => {
+    const data = useStaticQuery(graphql`
+        query {
+            site {
+                siteMetadata {
+                    title
+                }
+            }
+        }
+    `)
     return (
         <StyledSection >
             <h1 className="title">
-                Hi, Spencer here <span role="img" aria-label="emoji">👋</span><br />
+               Hi, { data.site.siteMetadata.title } here <span role="img" aria-label="emoji">👋</span><br />
             </h1>
             <h2 className="subtitle">
                 I'm a software tester/developer, music lover and gamer

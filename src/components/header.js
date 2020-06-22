@@ -1,6 +1,6 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import { Link, graphql, useStaticQuery } from "gatsby"
+import PropTypes from "prop-types"
 import styled from 'styled-components'
 
 const StyledSideBar = styled.div`
@@ -40,22 +40,36 @@ const StyledSideBar = styled.div`
       text-transform: uppercase;
       text-decoration: none;
     }
+    a:hover {
+      color: rgb(50, 50, 50);
+    }
 `
 
-
-const Header = ({ siteTitle }) => (
-  <StyledSideBar>
-    <div style={{ flex: `0 0 25%` }} /> 
-      <ul>
-        <li><Link to="/home">Home</Link></li>
-        <li><Link to="/portfolio">Portfolio</Link></li>
-        <li><Link to="/blog">Blog</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-      </ul>
-    
-    <div style={{ flex: `0 0 25%` }} />
-  </StyledSideBar>
-)
+const Header = () => {
+  const data = useStaticQuery(graphql`
+      query {
+        site {
+          siteMetadata {
+              author
+          }
+        }
+      }
+  `)
+  return (
+      <StyledSideBar>
+      <div style={{ flex: `0 0 25%` }} /> 
+        <ul>
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/portfolio">Portfolio</Link></li>
+          <li><Link to="/blog">Blog</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>  
+      <div style={{ flex: `0 0 25%` }}>
+        Created by { data.site.siteMetadata.author }
+      </div>
+    </StyledSideBar>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
